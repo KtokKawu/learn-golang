@@ -1,0 +1,64 @@
+//////////////////////////////
+// Settings
+//////////////////////////////
+:toc: macro
+:toc-title: 目次
+:toclevels: 5
+:sectnums:
+:sectanchors:
+:sectlinks:
+:idprefix:
+:idseparator: -
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+// Asciidoctor Ref: https://takumon.github.io/asciidoc-syntax-quick-reference-japanese-translation/
+
+//////////////////////////////
+// Contents
+//////////////////////////////
+= Golang memo
+
+toc::[]
+
+== Environment
+
+* link:https://go.dev/dl/[Golang v1.21.1]
+* link:https://code.visualstudio.com/[Visual Studio Code]
+* link:https://github.com/labstack/echo[echo v4.12.0 - Go Web Framework]
+
+.VS CodeのGo言語向け拡張機能が依存するパッケージのインストール
+
+    . VS Codeを起動
+    . Ctrl+Shift+P
+    . GO: Install/Update tools
+
+.Go言語のサンプルコード
+
+[source,go]
+----
+include::.\sysPro\hello.go[1..8]
+----
+
+.Webサーバの構築
+
+```
+cd .\go_local
+go get github.com/labstack/echo/v4@v4.12.0
+go run server.go
+```
+
+[NOTE]
+====
+.参考
+
+link:https://learn.microsoft.com/ja-jp/azure/developer/go/configure-visual-studio-code[Microsoft Learn - Go 開発用に Visual Studio Code を構成する]
+====
